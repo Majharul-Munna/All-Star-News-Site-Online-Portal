@@ -8,6 +8,7 @@ const loadNews = (tap) => {
 const displayNews = newss => {
     console.log(newss);
     const newsContainer = document.getElementById('news-container');
+    newsContainer.innerHTML = ``;
     newss.forEach(news => {
         const newsDiv = document.createElement('div');
         newsDiv.classList.add('col');
@@ -29,4 +30,37 @@ const displayNews = newss => {
     });
 }
 
-loadNews('03');
+const getBreaking = () =>{
+    const getBr = "01";
+    loadNews(getBr);
+}
+const getReguler = () =>{
+    const getRe = "02";
+    loadNews(getRe);
+}
+const getInternational = () =>{
+    const getIn = "03";
+    loadNews(getIn);
+}
+const getSports = () =>{
+    const getSp = "04";
+    loadNews(getSp);
+}
+const getEntertainment = () =>{
+    const getEn = "05";
+    loadNews(getEn);
+}
+const getCulture = () =>{
+    const getCu = "06";
+    loadNews(getCu);
+}
+const getArts = () =>{
+    const getAr = "07";
+    loadNews(getAr);
+}
+const getAll = () =>{
+    const getAl = "08";
+    loadNews(getAl);
+}
+
+loadNews('04');
