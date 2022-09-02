@@ -6,7 +6,7 @@ const loadNews = (tap) => {
 }
 
 const displayNews = newss => {
-    // console.log(newss);
+    console.log(newss);
     const newsContainer = document.getElementById('news-container');
   
     newsContainer.innerHTML = ``;
@@ -15,7 +15,7 @@ const displayNews = newss => {
         newsDiv.classList.add('col');
         newsDiv.innerHTML = `
               <div class="card container">
-                    <img src="${news.thumbnail_url}" class="" alt="...">
+                    <img src="${news.thumbnail_url}" class="img-fluid img-thumbnail" alt="...">
                     <div class="card-body">
                     <h5 class="card-title">${news.title}</h5>
                     <p class="card-text">${news.details.length > 200 ? news.details.slice(0,200) + '...' : news.details}</p>
