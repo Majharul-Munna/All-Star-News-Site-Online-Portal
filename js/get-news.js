@@ -6,8 +6,9 @@ const loadNews = (tap) => {
 }
 
 const displayNews = newss => {
-    console.log(newss);
+    // console.log(newss);
     const newsContainer = document.getElementById('news-container');
+  
     newsContainer.innerHTML = ``;
     newss.forEach(news => {
         const newsDiv = document.createElement('div');
@@ -17,14 +18,13 @@ const displayNews = newss => {
                     <img src="${news.thumbnail_url}" class="" alt="...">
                     <div class="card-body">
                     <h5 class="card-title">${news.title}</h5>
-                    <p class="card-text">${news.details.slice(0,200)}</p>
+                    <p class="card-text">${news.details.length > 200 ? news.details.slice(0,200) + '...' : news.details}</p>
                     </div>
                     <div class = "d-flex">
                     <img src="${news.author}" class="img-fluid rounded float-start" alt="...">
                     <p>${news.author.name}</p>
                     </div>
-                    
-              </div>
+                </div>
         `;
         newsContainer.appendChild(newsDiv);
     });
