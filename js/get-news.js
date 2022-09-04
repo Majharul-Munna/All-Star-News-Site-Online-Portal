@@ -164,6 +164,7 @@ const loadigFunction=isLoading =>{
   {
     loder.classList.remove('d-none')
   }
+  
   else
   {
     loder.classList.add('d-none')
