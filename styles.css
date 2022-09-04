@@ -2,11 +2,7 @@
     text-decoration: none;
     color: black;
 };
-.author img{
-    padding: p-5;
-    width: 55px;
-    height: 55px;
-}
+
 .d-btn-con {
     display: d-flex;
 }
